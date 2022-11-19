@@ -1,0 +1,290 @@
+@import "_variables";
+@import "_nav";
+@import "./sections/_apple";
+@import "./sections/ecommerce";
+@import "./sections/nikes";
+@import "./skills";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.homeBody {
+  background: $page-color;
+  display: flex;
+  flex-direction: column;
+  .first {
+    height: 100vh;
+  }
+  .sections {
+    width: 100vw;
+    transform: translateX(2.5rem);
+    z-index: auto;
+    .content {
+      position: relative;
+      top: 60%;
+      left: 10%;
+      max-width: 28rem;
+      h2 {
+        color: $text-color;
+        font-size: 2rem;
+        padding: 1rem;
+      }
+      p {
+        color: $text-color;
+        padding: 1rem;
+        font-size: 1.5rem;
+        border-bottom: 0.3rem solid $focus-color;
+      }
+    }
+
+    .projects-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+      h3 {
+        font-size: 2rem;
+        color: $text-color;
+        padding: 1.5rem;
+        border-bottom: 2px solid $focus-color;
+      }
+      .container {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 3rem 0;
+      }
+      .repository-Btn {
+        background-color: $focus-color;
+        color: white;
+        border: none;
+        width: 30%;
+        height: 2.5rem;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        box-shadow: 0 0 10px 1px $focus-color;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          animation: getBigger 0.5s ease-in-out forwards;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 1100px) {
+    .sections {
+      transform: translateX(0);
+    }
+    .first {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .content {
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        h2 {
+          color: $text-color;
+          font-size: 2rem;
+          padding: 1rem;
+        }
+        p {
+          color: $text-color;
+          padding: 1rem;
+          font-size: 1.5rem;
+          border-bottom: 0.3rem solid $focus-color;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 1600px) {
+    .second {
+      .projects-content {
+        display: flex;
+        justify-content: center;
+        .container {
+          display: flex;
+          flex-direction: column;
+          .apple,
+          .nikes,
+          .ecommerce {
+            flex-direction: row;
+            transform: translate(0);
+            margin: 1rem 0;
+            .desc {
+              transform: translate(0);
+              height: 20rem;
+            }
+          }
+        }
+        .repository-Btn {
+          font-size: 1rem;
+          height: 2rem;
+          &:hover {
+            animation: getBigger2 0.5s ease-in-out forwards;
+          }
+        }
+      }
+    }
+  }
+  @media all and (max-width: 840px) {
+    .second {
+      .projects-content {
+        .container {
+          .apple,
+          .nikes,
+          .ecommerce {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            .desc {
+              width: 80vw;
+            }
+            .img {
+              width: 80vw;
+            }
+          }
+        }
+        .repository-Btn {
+          font-size: 0.8rem;
+          width: 50%;
+          height: 1.5rem;
+          &:hover {
+            animation: getBigger3 0.5s ease-in-out forwards;
+          }
+        }
+      }
+    }
+  }
+  @media all and (max-width: 600px) {
+    .projects-content {
+      .container {
+        .apple,
+        .nikes,
+        .ecommerce {
+          .desc {
+            p {
+              font-size: 0.8rem;
+            }
+            .skill-btns {
+              .skillsUsed {
+                width: 50%;
+                div {
+                  width: 90%;
+                  font-size: 0.6rem;
+                }
+              }
+              .a-tags {
+                width: 50%;
+                a {
+                  width: 90%;
+                  font-size: 0.6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1800px) {
+  .projects-content {
+    .container {
+      .apple,
+      .nikes,
+      .ecommerce {
+        margin: 0 0.5rem;
+        justify-content: center;
+        align-items: center;
+        .desc {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          max-width: 100%;
+
+          p {
+          }
+          .skill-btns {
+            .skillsUsed {
+              width: 60%;
+              div {
+                width: 40%;
+                font-size: 0.8rem;
+              }
+            }
+            .a-tags {
+              width: 40%;
+              a {
+                width: 60%;
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slidedown {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes getBigger {
+  100% {
+    width: 35%;
+    height: 3rem;
+    font-size: 2rem;
+    box-shadow: 0 0 20px 1px $focus-color;
+  }
+}
+@keyframes getBigger2 {
+  100% {
+    width: 35%;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    box-shadow: 0 0 20px 1px $focus-color;
+  }
+}
+@keyframes getBigger3 {
+  100% {
+    width: 55%;
+    height: 2rem;
+    font-size: 1rem;
+    box-shadow: 0 0 20px 1px $focus-color;
+  }
+}
+
+.footer {
+  width: 100vw;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .downloadBtn {
+    text-decoration: none;
+    background-color: $focus-color;
+    color: $text-color-dark;
+    padding: 0.5rem 4rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 1px 7px 20px 1px black;
+  }
+}
