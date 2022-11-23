@@ -32,11 +32,14 @@
       .firstLi {
         border: none;
       }
+      a {
+        text-decoration: none;
+      }
       li {
         cursor: pointer;
         list-style: none;
         color: $text-color;
-        margin: 3rem 0;
+        margin: 3.5rem 0;
         font-size: 1.4rem;
         border-bottom: 1px solid $focus-color;
         &:hover {

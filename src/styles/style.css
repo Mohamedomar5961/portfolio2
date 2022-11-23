@@ -32,11 +32,14 @@
 .website-nav .navSide ul .firstLi {
   border: none;
 }
+.website-nav .navSide ul a {
+  text-decoration: none;
+}
 .website-nav .navSide ul li {
   cursor: pointer;
   list-style: none;
   color: #d4d4d8;
-  margin: 3rem 0;
+  margin: 3.5rem 0;
   font-size: 1.4rem;
   border-bottom: 1px solid #22c55e;
 }
@@ -701,6 +704,7 @@
 .homeBody .second .projects-content .container .nikes .desc,
 .homeBody .second .projects-content .container .ecommerce .desc {
     width: 80vw;
+    height: auto;
   }
   .homeBody .second .projects-content .container .apple .img,
 .homeBody .second .projects-content .container .nikes .img,

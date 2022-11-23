@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 const MblNav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -84,7 +85,16 @@ const MblNav = () => {
               </svg>
               GitHub
             </a>
-            <a>
+            <Link
+              className="Link-btn"
+              to="projects-content"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={20}
+              onClick={onToggle}
+            >
               <svg
                 width="50"
                 height="50"
@@ -130,8 +140,17 @@ const MblNav = () => {
                 </g>
               </svg>
               Projects
-            </a>
-            <a>
+            </Link>
+            <Link
+              className="Link-btn"
+              to="skills-content"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={60}
+              onClick={onToggle}
+            >
               <svg
                 width="55"
                 height="55"
@@ -207,7 +226,7 @@ const MblNav = () => {
                 </g>
               </svg>
               Skills
-            </a>
+            </Link>
           </ul>
         </div>
       ) : (
